@@ -5,6 +5,7 @@ public class Main {
     public static int addSix(int a){
         return a + 6;
     }
+    public static int addSeventeen(int b) { return b + 17; }
 
     static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
