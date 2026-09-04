@@ -21,24 +21,40 @@ public class Main {
 //        }
 //        return decrypted;
     };
-
+    /*
+        input: "encrypted" string
+        output: string
+        purpose: Swap the first and last character of the inputted string
+         */
     public static String decryptorB(String encrypted) {
         return encrypted.substring(encrypted.length()-1) +
                 encrypted.substring(1, (encrypted.length()-1)) +
                 encrypted.substring(0, 1);
     }
-
+    /*
+        input: "encrypted" string
+        output: string
+        purpose: remove the last 2 characters of the input and move the last character to the front
+         */
     public static String decryptorC(String encrypted){
         return encrypted.substring(encrypted.length()-3, encrypted.length()-2)+
                 encrypted.substring(0, encrypted.length()-3);
     }
-
+    /*
+        input: "encrypted" string
+        output: string
+        purpose: move the last character of the string to the middle of the string
+         */
     public static String decryptorD(String encrypted){
         return encrypted.substring(0, encrypted.length()/2) +
                 encrypted.substring(encrypted.length()-1) +
                 encrypted.substring((encrypted.length()/2), encrypted.length()-1);
     }
-
+    /*
+        input: "encrypted" string
+        output: string
+        purpose: find the middle, add all characters to the end of the string then add the first half to the end in reverse
+         */
     public static String decryptorLA(String encrypted){
         String decrypted = "";
         int reverse = encrypted.length()/2;
@@ -57,7 +73,11 @@ public class Main {
         }
         return decrypted;
     }
-
+    /*
+        input: "encrypted" string
+        output: string
+        purpose: replace each vowel with the previous in the aeiou sequence, example a->u & u->o
+         */
     public static String decryptorLB(String encrypted){
         String decrypted = "";
         for (int i=0; i<encrypted.length(); i++) {
